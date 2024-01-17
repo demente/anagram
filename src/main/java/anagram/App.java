@@ -31,7 +31,9 @@ public class App {
             case ANAGRAM_LIST:
                 String listInput = InputCLI.anagramListInput();
                 List<String> anagramList = getAnagrams(listInput);
-                anagramList.forEach(System.out::println);
+                if (anagramList != null) {
+                    anagramList.forEach(System.out::println);
+                }
                 run();
                 break;
             case CLOSE:
